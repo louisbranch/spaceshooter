@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 1.0f;
 
+	public GameObject engine;
+
 	private void Update() {
 		float hMove = Input.GetAxis("Horizontal");
 		float vMove = Input.GetAxis("Vertical");
@@ -15,6 +17,12 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (hMove != 0) {
 			transform.Translate(Vector3.right * speed * Mathf.Sign(hMove) * Time.deltaTime);
+		}
+
+		if (hMove != 0 || vMove != 0) {
+			engine.SetActive(true);
+		} else {
+			engine.SetActive(false);
 		}
 	
 	}
