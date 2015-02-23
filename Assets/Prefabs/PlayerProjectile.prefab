@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21234300}
   - 50: {fileID: 5011118}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

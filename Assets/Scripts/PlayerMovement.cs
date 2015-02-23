@@ -11,14 +11,17 @@ public class PlayerMovement : MonoBehaviour {
 		float hMove = Input.GetAxis("Horizontal");
 		float vMove = Input.GetAxis("Vertical");
 
+		// Vertical movement at constant speed
 		if (vMove != 0) {
 			transform.Translate(Vector3.up * speed * Mathf.Sign(vMove) * Time.deltaTime);
 		} 
 
+		// Horizontal movement at constant speed
 		if (hMove != 0) {
 			transform.Translate(Vector3.right * speed * Mathf.Sign(hMove) * Time.deltaTime);
 		}
 
+		// Toggle engine sprites display
 		if (hMove != 0 || vMove != 0) {
 			engine.SetActive(true);
 		} else {
