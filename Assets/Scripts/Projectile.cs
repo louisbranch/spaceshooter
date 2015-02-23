@@ -11,6 +11,12 @@ public class Projectile : MonoBehaviour {
 		anim = GetComponent<Animator>();
 	}
 
+	private void Update () {
+		if (!gameObject.renderer.isVisible) {
+			Destroy(this.gameObject);
+		}
+	}
+
 	private void OnTriggerEnter2D (Collider2D coll) {
 		if (coll.tag == target) {
 			Transform[] allChildren =  coll.GetComponentsInChildren<Transform>();
