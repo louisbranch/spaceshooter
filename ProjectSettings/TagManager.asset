@@ -3,6 +3,8 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - PlayerProjectile
+  - EnemyProjectile
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

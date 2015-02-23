@@ -41,6 +41,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 422956}
   - 114: {fileID: 11422962}
+  - 50: {fileID: 5060702}
+  - 61: {fileID: 6160702}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -126,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422952}
@@ -172,6 +174,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 422960}
   m_RootOrder: 1
+--- !u!50 &5060702
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122956}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &6160702
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122956}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11422960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c6ca55190224d65af85ad39e144e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   engine: {fileID: 122960}
 --- !u!212 &21222958
 SpriteRenderer:

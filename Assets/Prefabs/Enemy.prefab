@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21285336}
   - 50: {fileID: 5097030}
   - 114: {fileID: 11498626}
+  - 58: {fileID: 5841064}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -41,10 +42,21 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5841064
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185336}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: .5
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11498626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,7 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b06bb9a0210d43d3b4e4d6452c6592c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 3
   laserSpeed: 4.5
   projectile: {fileID: 142478, guid: a0afc4357ca4f49a0a1c41b265caa7eb, type: 2}
 --- !u!212 &21285336

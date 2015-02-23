@@ -29,4 +29,10 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	
 	}
+
+	private void OnTriggerEnter2D (Collider2D coll) {
+		if (coll.tag == "EnemyProjectile") {
+			Destroy(this);
+		}
+	}
 }

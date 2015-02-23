@@ -17,6 +17,16 @@ public class EnemyAI : MonoBehaviour {
 			GameObject laser = (GameObject)Instantiate(projectile, position, Quaternion.identity);
 			laser.rigidbody2D.velocity = Vector3.left * laserSpeed;
 		}
+
+		if (!gameObject.renderer.isVisible) {
+			Destroy(this.gameObject);
+		}
+	}
+
+	private void OnTriggerEnter2D (Collider2D coll) {
+		if (coll.tag == "PlayerProjectile") {
+			Destroy(this.gameObject);
+		}
 	}
 
 }
