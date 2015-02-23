@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour {
 	}
 
 	// Callback to destroy object after the end of animation
-	public void DestroyProjectile () {
+	public void DestroyInstance () {
 		Destroy(this.gameObject);
 	}
 }

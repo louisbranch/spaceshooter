@@ -23,5 +23,5 @@ public class EnemyAI : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
-
+	
 }

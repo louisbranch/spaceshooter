@@ -5,10 +5,20 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 1.0f;
-
+	
 	public GameObject engine;
 
+	private bool dead = false;
+
+	Animator anim;
+
+	private void Awake () {
+		anim = GetComponent<Animator>();
+	}
+
 	private void Update() {
+		if (dead) return;
+
 		float hMove = Input.GetAxis("Horizontal");
 		float vMove = Input.GetAxis("Vertical");
 
@@ -31,5 +41,23 @@ public class PlayerMovement : MonoBehaviour {
 	
 	}
 
+	private void OnTriggerEnter2D (Collider2D coll) {
+		if (coll.tag == "Enemy") {
+			Destroy(coll.gameObject);				// destroy enemy
+			anim.SetTrigger("Explode");				// play animation
+			transform.collider2D.enabled = false;  	// disable further collisions
+			dead = true;							// prevent further interactions
+			engine.SetActive(false);				// disable engine sprites
+		}
+	}
+
+	// Callback to destroy object after the end of animation
+	public void DestroyInstance () {
+		Transform[] allChildren =  GetComponentsInChildren<Transform>();
+		foreach (Transform child in allChildren) {
+			Destroy(child.gameObject);       // destroy each child of player
+		}
+		Destroy(this.gameObject);
+	}
 
 }
