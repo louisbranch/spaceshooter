@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Class responsible for player movement on screen
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 1.0f;
@@ -30,13 +31,5 @@ public class PlayerMovement : MonoBehaviour {
 	
 	}
 
-	private void OnTriggerEnter2D (Collider2D coll) {
-		if (coll.tag == "EnemyProjectile") {
-			Transform[] allChildren =  GetComponentsInChildren<Transform>();
-			foreach (Transform child in allChildren) {
-				Destroy(child.gameObject);
-			}
-			Destroy(this);
-		}
-	}
+
 }

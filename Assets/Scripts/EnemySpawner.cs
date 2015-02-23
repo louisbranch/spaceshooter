@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Class responsible to spawn new enemies ships
 public class EnemySpawner : MonoBehaviour {
 
 	public GameObject enemy;
@@ -11,11 +12,11 @@ public class EnemySpawner : MonoBehaviour {
 
 	private float nextSpawn;
 
+	// Spawn a new enemy every 3..5 seconds
 	private void Update () {
 		if (Time.time > nextSpawn) {
-			Vector3 position = transform.position;
-			GameObject ufo = (GameObject)Instantiate(enemy, position, Quaternion.identity);
-			ufo.rigidbody2D.velocity = direction * enemySpeed;
+			GameObject ship = (GameObject)Instantiate(enemy, transform.position, Quaternion.identity);
+			ship.rigidbody2D.velocity = direction * enemySpeed;
 			nextSpawn = Time.time + Random.Range(3, 5);
 		}
 	}

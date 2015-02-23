@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Class responsible for firing and picking up player weapons and powerups
 public class PlayerWeapon : MonoBehaviour {
 
 	public float fireRate = 3.0f;
@@ -15,9 +16,7 @@ public class PlayerWeapon : MonoBehaviour {
 		bool fire = Input.GetButton("Fire1");
 		if (fire && (Time.time > nextFire)) {
 			nextFire = Time.time + fireRate;
-			Vector3 position = transform.position;
-			position.y -= 0.03f;
-			GameObject laser = (GameObject)Instantiate(projectile, position, Quaternion.identity);
+			GameObject laser = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
 			laser.rigidbody2D.velocity = Vector3.right * laserSpeed;
 		} 
 	}
