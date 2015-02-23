@@ -23,10 +23,4 @@ public class EnemyAI : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerEnter2D (Collider2D coll) {
-		if (coll.tag == "PlayerProjectile") {
-			Destroy(this.gameObject);
-		}
-	}
-
 }

@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void OnTriggerEnter2D (Collider2D coll) {
 		if (coll.tag == "EnemyProjectile") {
+			Transform[] allChildren =  GetComponentsInChildren<Transform>();
+			foreach (Transform child in allChildren) {
+				Destroy(child.gameObject);
+			}
 			Destroy(this);
 		}
 	}
