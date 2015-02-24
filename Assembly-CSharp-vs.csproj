@@ -55,7 +55,8 @@
      <Compile Include="Assets\Scripts\PowerupSpawner.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />
-     <Compile Include="Assets\Scripts\ShieldRotation.cs" />
+     <Compile Include="Assets\Scripts\ShieldRotator.cs" />
+     <Compile Include="Assets\Scripts\Turret.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

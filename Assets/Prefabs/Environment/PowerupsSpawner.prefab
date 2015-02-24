@@ -1,52 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &164116
+--- !u!1 &105138
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 464116}
-  - 114: {fileID: 11464116}
+  - 4: {fileID: 405138}
+  - 114: {fileID: 11405138}
   m_Layer: 0
-  m_Name: SpawnerPoint
+  m_Name: PowerupsSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &464116
+--- !u!4 &405138
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164116}
-  m_LocalRotation: {x: 0, y: 0, z: .70710659, w: -.707106948}
-  m_LocalPosition: {x: 7, y: 4, z: 0}
+  m_GameObject: {fileID: 105138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11464116
+--- !u!114 &11405138
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164116}
+  m_GameObject: {fileID: 105138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4865757374a24432e8021cf45d884470, type: 3}
+  m_Script: {fileID: 11500000, guid: 27bdb96c9b5034dc0801e5a2381247ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 133474, guid: c21cc0c5d45b54d27b2f149ad36d887a, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  enemySpeed: 2.5
-  direction: {x: -1, y: 0}
+  powerups:
+  - {fileID: 102694, guid: 2bb589f9b10c843a6b23c3a156b725e4, type: 2}
+  - {fileID: 150096, guid: 58395e7d83e2e4ed6bbf7ec46bd134a7, type: 2}
+  spawnSpeed: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -56,6 +52,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 164116}
+  m_RootGameObject: {fileID: 105138}
   m_IsPrefabParent: 1
   m_IsExploded: 1

@@ -13,6 +13,7 @@ public class Player : Entity {
 	public GameObject projectile;
 	public GameObject cannon;
 	public GameObject shield;
+	public GameObject turret;
 	
 	private float nextFire = 0f;
 	private bool dead = false;
@@ -31,12 +32,12 @@ public class Player : Entity {
 
 		// Vertical movement at constant speed
 		if (vMove != 0) {
-			transform.Translate(Vector3.up * speed * Mathf.Sign(vMove) * Time.deltaTime);
+			transform.Translate(-Vector2.right * speed * Mathf.Sign(vMove) * Time.deltaTime);
 		} 
 
 		// Horizontal movement at constant speed
 		if (hMove != 0) {
-			transform.Translate(Vector3.right * speed * Mathf.Sign(hMove) * Time.deltaTime);
+			transform.Translate(Vector2.up * speed * Mathf.Sign(hMove) * Time.deltaTime);
 		}
 
 		// Toggle engine sprites display
@@ -50,7 +51,7 @@ public class Player : Entity {
 		bool fire = Input.GetButton("Fire1");
 		if (fire && (Time.time > nextFire)) {
 			nextFire = Time.time + fireRate;
-			GameObject laser = (GameObject)Instantiate(projectile, cannon.transform.position, Quaternion.identity);
+			GameObject laser = (GameObject)Instantiate(projectile, cannon.transform.position, transform.rotation);
 			laser.rigidbody2D.velocity = Vector3.right * laserSpeed;
 		} 
 	}
@@ -66,6 +67,10 @@ public class Player : Entity {
 			shield.GetComponent<Shield>().Activate();
 			Destroy(coll.gameObject);
 			break;
+		case "Turret":
+			turret.GetComponent<Turret>().Activate();
+			Destroy(coll.gameObject);
+			break;
 		default:
 			break;
 		}
@@ -76,6 +81,7 @@ public class Player : Entity {
 		transform.collider2D.enabled = false;  	// disable further collisions
 		dead = true;							// prevent further interactions
 		engine.SetActive(false);				// disable engine sprites
+		turret.renderer.enabled = false;		// disable turret
 	}
 
 	// Callback to destroy object after the end of animation
