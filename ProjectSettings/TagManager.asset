@@ -4,6 +4,8 @@
 TagManager:
   tags:
   - Enemy
+  - Shield
+  - Turret
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

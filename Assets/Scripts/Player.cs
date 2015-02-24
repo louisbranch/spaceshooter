@@ -12,16 +12,16 @@ public class Player : Entity {
 	public GameObject engine;
 	public GameObject projectile;
 	public GameObject cannon;
+	public GameObject shield;
 	
 	private float nextFire = 0f;
 	private bool dead = false;
 
-	public Animator anim;
-	
+	private Animator anim;
+
 	private void Awake () {
 		anim = GetComponent<Animator>();
 	}
-
 
 	private void Update() {
 		if (dead) return;
@@ -57,9 +57,17 @@ public class Player : Entity {
 
 
 	private void OnTriggerEnter2D (Collider2D coll) {
-		if (coll.tag == "Enemy") {
+		switch (coll.tag) {
+		case "Enemy":
 			TakeDamage(1);
 			coll.GetComponent<Entity>().TakeDamage(1);
+			break;
+		case "Shield":
+			shield.GetComponent<Shield>().Activate();
+			Destroy(coll.gameObject);
+			break;
+		default:
+			break;
 		}
 	}
 

@@ -10,12 +10,12 @@ GameObject:
   - 4: {fileID: 467510}
   - 114: {fileID: 11467510}
   m_Layer: 0
-  m_Name: Shield
+  m_Name: ShieldRotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &167512
 GameObject:
   m_ObjectHideFlags: 1
@@ -29,7 +29,7 @@ GameObject:
   - 50: {fileID: 5067510}
   - 114: {fileID: 11467512}
   m_Layer: 0
-  m_Name: Meteor
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e5ddb3ef9c44fb8b168f691c544096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 10
 --- !u!114 &11482524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,12 +308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c6ca55190224d65af85ad39e144e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   speed: 3
-  fireRate: 3
-  laserSpeed: 3
+  fireRate: .5
+  laserSpeed: 4
   engine: {fileID: 182516}
   projectile: {fileID: 134300, guid: 0c5ecb310e38d480ab31a2d705cc2fed, type: 2}
   cannon: {fileID: 182522}
+  shield: {fileID: 167512}
 --- !u!212 &21267510
 SpriteRenderer:
   m_ObjectHideFlags: 1
