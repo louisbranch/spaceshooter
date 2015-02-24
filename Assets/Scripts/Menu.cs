@@ -6,4 +6,20 @@ public class Menu : MonoBehaviour {
 	public void StartGame () {
 		Application.LoadLevel("Level");
 	}
+
+	public void MainMenu () {
+		Application.LoadLevel("MainMenu");
+	}
+
+	public void Credits () {
+		Application.LoadLevel("Credits");
+	}
+	
+	public void HowTo () {
+		Application.LoadLevel("HowTo");
+	}
+	
+	public void Quit () {
+		Application.Quit();
+	}
 }

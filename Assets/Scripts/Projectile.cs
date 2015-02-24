@@ -13,6 +13,7 @@ public class Projectile : Entity {
 		}
 	}
 
+	// Do and take damage when colliding to target
 	private void OnTriggerEnter2D (Collider2D coll) {
 		if (coll.tag == target) {
 			coll.GetComponent<Entity>().TakeDamage(1);
@@ -20,6 +21,7 @@ public class Projectile : Entity {
 		}
 	}
 
+	// Destroy self
 	override public void Kill () {
 		Destroy(this.gameObject);
 	}

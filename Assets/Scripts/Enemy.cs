@@ -45,7 +45,7 @@ public class Enemy : Entity {
 	public void DestroyInstance () {
 		Transform[] allChildren =  GetComponentsInChildren<Transform>();
 		foreach (Transform child in allChildren) {
-			Destroy(child.gameObject);       // destroy each child of enemy
+			Destroy(child.gameObject);       	// destroy each child of enemy
 		}
 		Destroy(this.gameObject);
 	}
