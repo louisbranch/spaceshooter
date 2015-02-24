@@ -12,7 +12,8 @@ public class PowerupSpawner : MonoBehaviour {
 	private void Update () {
 		// spawn a new powerup every 10s around the spawner point
 		if (Time.time > nextSpawn) {
-			GameObject powerup = powerups[Random.Range(0, powerups.Length - 1)];
+			int rnd = Random.Range(0, powerups.Length);
+			GameObject powerup = powerups[rnd];
 			Vector2 position;
 			position.x = transform.position.x + Random.Range(-1f, 1f);
 			position.y = transform.position.y + Random.Range(-1f, 1f);

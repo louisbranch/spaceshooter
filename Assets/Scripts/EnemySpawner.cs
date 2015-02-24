@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Spawn a new enemy every 3..5 seconds
 	private void Update () {
-		GameObject enemy = enemies[Random.Range(0, enemies.Length - 1)];
+		GameObject enemy = enemies[Random.Range(0, enemies.Length)];
 		if (Time.time > nextSpawn) {	
 			GameObject ship = (GameObject)Instantiate(enemy, transform.position, transform.rotation);
 			ship.rigidbody2D.velocity = direction * enemySpeed;

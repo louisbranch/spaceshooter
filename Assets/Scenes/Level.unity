@@ -128,7 +128,7 @@ Transform:
   - {fileID: 938283822}
   - {fileID: 189778245}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!61 &60499140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -982,7 +982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1431152240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!114 &1491238436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,6 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerups:
   - {fileID: 102694, guid: 2bb589f9b10c843a6b23c3a156b725e4, type: 2}
+  - {fileID: 150096, guid: 58395e7d83e2e4ed6bbf7ec46bd134a7, type: 2}
   spawnSpeed: 10
 --- !u!1001 &1514028701
 Prefab:
@@ -1329,7 +1330,7 @@ Transform:
   - {fileID: 2055642043}
   - {fileID: 1374129614}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &1989327691
 Prefab:
   m_ObjectHideFlags: 0
@@ -1475,7 +1476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482524, guid: d04d0a96fb9c64176b3060875702d37e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11467512, guid: d04d0a96fb9c64176b3060875702d37e, type: 2}
       propertyPath: duration
