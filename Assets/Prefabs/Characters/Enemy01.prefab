@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b06bb9a0210d43d3b4e4d6452c6592c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   projectile: {fileID: 142478, guid: a0afc4357ca4f49a0a1c41b265caa7eb, type: 2}
   cannon: {fileID: 133476}
 --- !u!212 &21233476
