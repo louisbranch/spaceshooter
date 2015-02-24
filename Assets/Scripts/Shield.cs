@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Shield : MonoBehaviour {
 
-	public float duration = 10f;
+	public float duration = 5f;
 
 	private float counter;
 

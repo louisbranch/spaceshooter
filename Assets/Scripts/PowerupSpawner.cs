@@ -17,7 +17,8 @@ public class PowerupSpawner : MonoBehaviour {
 			position.x = transform.position.x + Random.Range(-1f, 1f);
 			position.y = transform.position.y + Random.Range(-1f, 1f);
 			nextSpawn = Time.time + spawnSpeed;
-			GameObject laser = (GameObject)Instantiate(powerup, position, transform.rotation);
+			GameObject instance = (GameObject)Instantiate(powerup, position, transform.rotation);
+			instance.rigidbody2D.velocity = Vector3.left * 3f;
 		}
 	}
 

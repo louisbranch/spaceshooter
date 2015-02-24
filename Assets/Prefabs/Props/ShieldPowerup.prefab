@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21202694}
   - 61: {fileID: 6102694}
   - 50: {fileID: 5002694}
+  - 114: {fileID: 11467104}
   m_Layer: 0
   m_Name: ShieldPowerup
   m_TagString: Shield
@@ -56,6 +57,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .680000007, y: .660000026}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11467104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89814c76c4e5c44bdac810178b50e262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21202694
 SpriteRenderer:
   m_ObjectHideFlags: 1
