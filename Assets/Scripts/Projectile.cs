@@ -2,7 +2,7 @@
 using System.Collections;
 
 // Class responsible to handle projectile collisions, animations and its lifecycle
-public class Projectile : MonoBehaviour {
+public class Projectile : Entity {
 
 	public string target;
 	
@@ -16,8 +16,12 @@ public class Projectile : MonoBehaviour {
 	private void OnTriggerEnter2D (Collider2D coll) {
 		if (coll.tag == target) {
 			coll.GetComponent<Entity>().TakeDamage(1);
-			Destroy(this.gameObject);
+			TakeDamage(1);
 		}
+	}
+
+	override public void Kill () {
+		Destroy(this.gameObject);
 	}
 
 }
