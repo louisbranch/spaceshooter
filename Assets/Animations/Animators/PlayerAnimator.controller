@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GreenExplosionAnimator
+  m_Name: PlayerAnimator
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Explode
@@ -70,7 +70,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: ce3617ab2563142caa89117389b5c38a, type: 2}
+  - {fileID: 7400000, guid: 963439d6b140b439e94912db2601ccb7, type: 2}
   m_ParentStateMachine: {fileID: 110762424}
   m_Position: {x: 324, y: 60, z: 0}
   m_IKOnFeet: 0

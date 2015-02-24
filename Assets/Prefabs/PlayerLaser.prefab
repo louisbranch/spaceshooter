@@ -12,7 +12,6 @@ GameObject:
   - 50: {fileID: 5011118}
   - 61: {fileID: 6119520}
   - 114: {fileID: 11482630}
-  - 95: {fileID: 9589098}
   m_Layer: 0
   m_Name: PlayerLaser
   m_TagString: Untagged
@@ -58,21 +57,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .551226616, y: .129380703}
   m_Center: {x: -.00897550583, y: .0044875145}
---- !u!95 &9589098
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134300}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88a79f71cb8bd4ddb9bc36030e0e9410, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11482630
 MonoBehaviour:
   m_ObjectHideFlags: 1

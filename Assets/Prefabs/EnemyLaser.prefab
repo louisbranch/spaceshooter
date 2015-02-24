@@ -12,7 +12,6 @@ GameObject:
   - 50: {fileID: 5071014}
   - 61: {fileID: 6111808}
   - 114: {fileID: 11484996}
-  - 95: {fileID: 9586448}
   m_Layer: 0
   m_Name: EnemyLaser
   m_TagString: Untagged
@@ -58,21 +57,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .0798022375, y: .460330725}
   m_Center: {x: .000361442566, y: .0132226944}
---- !u!95 &9586448
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142478}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c9a5d4acae944aaa96bb4c591f3c211, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11484996
 MonoBehaviour:
   m_ObjectHideFlags: 1
