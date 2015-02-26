@@ -31,12 +31,12 @@ public class Turret : MonoBehaviour {
 		}
 
 		// rotate anti-clockwise
-		if (Input.GetKey("z")) {
+		if (Input.GetKey(",")) {
 			transform.Rotate(new Vector3(0, 0, 3f));
 		}
 
 		// rotate clockwise
-		if (Input.GetKey("x")) {
+		if (Input.GetKey(".")) {
 			transform.Rotate(new Vector3(0, 0, -3f));
 		}
 	}
