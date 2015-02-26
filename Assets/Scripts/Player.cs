@@ -63,8 +63,7 @@ public class Player : Entity {
 		bool fire = Input.GetButton("Fire1");
 		if (fire && (Time.time > nextFire)) {
 			nextFire = Time.time + fireRate;
-			GameObject laser = (GameObject)Instantiate(projectile, cannon.transform.position, transform.rotation);
-			laser.rigidbody2D.velocity = Vector3.right * laserSpeed;
+			Instantiate(projectile, cannon.transform.position, transform.rotation);
 		} 
 	}
 

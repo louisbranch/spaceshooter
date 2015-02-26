@@ -788,6 +788,10 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 130438, guid: d04d0a96fb9c64176b3060875702d37e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d04d0a96fb9c64176b3060875702d37e, type: 2}
   m_RootGameObject: {fileID: 60499137}

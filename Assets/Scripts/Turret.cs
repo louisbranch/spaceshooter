@@ -17,7 +17,7 @@ public class Turret : MonoBehaviour {
 	}
 	
 	private void Update () {
-		// disavle after 5 secs
+		// disable after 5 secs
 		if (counter > 0 && (Time.time - counter > duration)) {
 			gameObject.SetActive(false);
 			counter = 0;
@@ -26,8 +26,7 @@ public class Turret : MonoBehaviour {
 		// fires a new projectile every second
 		if (counter > 0 && Time.time > nextFire) {
 			nextFire = Time.time + 1;
-			GameObject laser = (GameObject)Instantiate(projectile, cannon.transform.position, transform.rotation);
-			//laser.rigidbody2D.velocity;
+			Instantiate(projectile, cannon.transform.position, transform.rotation);
 		}
 
 		// rotate anti-clockwise
