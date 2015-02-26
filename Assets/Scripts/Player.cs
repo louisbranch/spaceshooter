@@ -20,8 +20,14 @@ public class Player : Entity {
 
 	private Animator anim;
 
+	private Vector2 minBounds;
+	private Vector2 maxBounds;
+
 	private void Awake () {
 		anim = GetComponent<Animator>();
+		Camera mainCamera = Camera.main;
+
+
 	}
 
 	private void Update() {
@@ -30,14 +36,20 @@ public class Player : Entity {
 		float hMove = Input.GetAxis("Horizontal");
 		float vMove = Input.GetAxis("Vertical");
 
+		Vector2 oldP = transform.position;
+		Vector2 newP;
+
 		// Vertical movement at constant speed
 		if (vMove != 0) {
-			transform.Translate(-Vector2.right * speed * Mathf.Sign(vMove) * Time.deltaTime);
-		} 
+			newP = oldP + (Vector2.up * speed * Mathf.Sign(vMove) * Time.deltaTime);
+			transform.position = newP;
+		}
 
+		oldP = transform.position;
 		// Horizontal movement at constant speed
 		if (hMove != 0) {
-			transform.Translate(Vector2.up * speed * Mathf.Sign(hMove) * Time.deltaTime);
+			newP = oldP + (Vector2.right * speed * Mathf.Sign(hMove) * Time.deltaTime);
+			transform.position = newP;
 		}
 
 		// Toggle engine sprites display
