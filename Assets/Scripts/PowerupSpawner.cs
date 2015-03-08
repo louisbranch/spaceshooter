@@ -16,7 +16,7 @@ public class PowerupSpawner : MonoBehaviour {
 			GameObject powerup = powerups[rnd];
 			Vector2 position;
 			position.x = transform.position.x + Random.Range(-1f, 1f);
-			position.y = transform.position.y + Random.Range(-1f, 1f);
+			position.y = transform.position.y + Random.Range(-2f, 2f);
 			nextSpawn = Time.time + spawnSpeed;
 			GameObject instance = (GameObject)Instantiate(powerup, position, transform.rotation);
 			instance.rigidbody2D.velocity = Vector3.left * 3f;

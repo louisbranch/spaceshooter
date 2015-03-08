@@ -20,14 +20,17 @@ public class Player : Entity {
 
 	private Animator anim;
 
-	private Vector2 minBounds;
-	private Vector2 maxBounds;
+	private float minX;
+	private float maxX;
+	private float minY;
+	private float maxY;
 
 	private void Awake () {
 		anim = GetComponent<Animator>();
-		Camera mainCamera = Camera.main;
-
-
+		minX = Camera.main.transform.position.x - Camera.main.orthographicSize - 1;
+		maxX = Camera.main.transform.position.x + Camera.main.orthographicSize + 1;
+		minY = Camera.main.transform.position.y - Camera.main.orthographicSize + 0.5f;
+		maxY = Camera.main.transform.position.y + Camera.main.orthographicSize - 0.5f;
 	}
 
 	private void Update() {
@@ -36,21 +39,20 @@ public class Player : Entity {
 		float hMove = Input.GetAxis("Horizontal");
 		float vMove = Input.GetAxis("Vertical");
 
-		Vector2 oldP = transform.position;
-		Vector2 newP;
+		float x = transform.position.x;
+		float y = transform.position.y;
 
-		// Vertical movement at constant speed
+		// Vertical movement at constant speed limited by camera size
 		if (vMove != 0) {
-			newP = oldP + (Vector2.up * speed * Mathf.Sign(vMove) * Time.deltaTime);
-			transform.position = newP;
+			y = Mathf.Clamp(y + (speed * Mathf.Sign(vMove) * Time.deltaTime), minY, maxY);
 		}
 
-		oldP = transform.position;
 		// Horizontal movement at constant speed
 		if (hMove != 0) {
-			newP = oldP + (Vector2.right * speed * Mathf.Sign(hMove) * Time.deltaTime);
-			transform.position = newP;
+			x = Mathf.Clamp(x + (speed * Mathf.Sign(hMove) * Time.deltaTime), minX, maxX);
 		}
+
+		transform.position = new Vector2(x, y);
 
 		// Toggle engine sprites display
 		if (hMove != 0 || vMove != 0) {
