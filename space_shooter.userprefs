@@ -1,14 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PowerupSpawner.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Player/PlayerCollision.cs">
     <Files>
-      <File FileName="../kanjicatch/Assets/Data/Kanji.txt" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Turret.cs" Line="29" Column="75" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="31" Column="3" />
-      <File FileName="Assets/Scripts/Projectile.cs" Line="15" Column="60" />
-      <File FileName="Assets/Scripts/PowerupSpawner.cs" Line="22" Column="54" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Player/PlayerMovement.cs" Line="81" Column="35" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Managers/AudioManager.cs" Line="35" Column="20" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Player/PlayerCollision.cs" Line="12" Column="50" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Utilities/SceneTransition.cs" Line="1" Column="1" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Level/Door.cs" Line="1" Column="1" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Level/Switch.cs" Line="13" Column="4" />
+      <File FileName="../../Downloads/Lab6Project/Assets/MyAssets/Scripts/Level/Teleporter.cs" Line="13" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
